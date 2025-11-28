@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .g{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+  img{width:100%;cursor:pointer;border-radius:8px}
+  #m{display:none;position:fixed;inset:0;background:#0008;place-items:center}
+  #m img{max-width:90%;max-height:90%}
+</style>
+</head>
+<body>
+<div class="g">
+  <img src="download (1).jpeg" onclick="o(this.src)">
+  <img src="download (2).jpeg" onclick="o(this.src)">
+  <img src="download.jpeg" onclick="o(this.src)">
+</div>
+<div id="m" onclick="c()"><img id="mi"></div>
+<script>
+  const m=document.getElementById('m'),mi=document.getElementById('mi');
+  function o(s){mi.src=s;m.style.display='grid'}
+  function c(){m.style.display='none'}
+</script>
+</body>
+</html>
